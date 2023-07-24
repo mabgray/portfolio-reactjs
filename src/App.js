@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import AboutMe from './components/AboutMe';
+
+import './styles/AboutMe.css'; // Make sure to create the CSS file for styling
+import mypic from './images/mypic.jpg';
+
 
 const Home = () => (
   <div>
@@ -20,6 +23,28 @@ const Header = () => (
     </nav>
   </header>
 );
+
+
+const AboutMe = () => {
+  return (
+    <div className="about-me-container">
+      <h1 className="heading">Your Name</h1>
+      <div className="content-container">
+        <div className="image-container">
+          <img src={mypic} alt='image of mab'/>
+        </div>
+        <div className="text-container">
+          <p>
+            Your blurb of text goes here. Write about your background, skills,
+            and any other information you want to share with visitors.
+          </p>
+        </div>
+      </div>
+      <footer className="footer">Your Footer Content</footer>
+    </div>
+  );
+};
+
 
 const Footer = () => (
   <footer>
