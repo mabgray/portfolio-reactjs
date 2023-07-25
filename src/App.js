@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-
 import './styles/AboutMe.css'; // Make sure to create the CSS file for styling
 import mypic from './images/mypic.jpg';
+import './skills.css';
 
 
 const Home = () => (
   <div>
-    <h1>Welcome to my Portfolio</h1>
+    <h1>I'm A React JavaScript Web Developer</h1>
     <Link to="/about">About Me</Link>
   </div>
 );
@@ -20,6 +20,7 @@ const Header = () => (
     <nav>
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
+      <Link to="/skills">Skills</Link>
     </nav>
   </header>
 );
@@ -28,7 +29,7 @@ const Header = () => (
 const AboutMe = () => {
   return (
     <div className="about-me-container">
-      <h1 className="heading">Your Name</h1>
+      <h1 className="heading">MAB GRAY - Front End Web Developer</h1>
       <div className="content-container">
         <div className="image-container">
           <img src={mypic} alt='image of mab'/>
@@ -45,10 +46,29 @@ const AboutMe = () => {
   );
 };
 
+const Skills = () => {
+  return (
+    <div className="about-me-container">
+      <h1 className="heading">MAB GRAY - Skills</h1>
+      <div className="content-container">
+        <div className="image-container">
+          <img src={mypic} alt='image of mab'/>
+        </div>
+        <div className="text-container">
+          <p>
+           my skills
+          </p>
+        </div>
+      </div>
+      <footer className="footer">Your Footer Content</footer>
+    </div>
+  );
+};
+
 
 const Footer = () => (
   <footer>
-    <p>&copy; {new Date().getFullYear()} Your Name</p>
+    <p>&copy; {new Date().getFullYear()} mab gray</p>
   </footer>
 );
 
@@ -61,6 +81,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
+            <Route path="/skills" element={<Skills />} />
           </Routes>
         </main>
         <Footer />
