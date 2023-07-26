@@ -9,7 +9,7 @@ import './skills.css';
 const Home = () => (
   <div>
     <h1>I'm A React JavaScript Web Developer</h1>
-    <Link to="/about">About Me</Link>
+    {/* <Link to="/about">About Me</Link> */}
   </div>
 );
 
